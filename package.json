@@ -1,0 +1,21 @@
+{
+  "name": "durable-sandboxes",
+  "version": "0.1.0",
+  "description": "Actors on Vercel Drive and Vercel Sandbox, a bit like Cloudflare Durable Objects.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "demo": "node --env-file=.env.local demo.ts",
+    "typecheck": "tsc --noEmit --strict --module nodenext --moduleResolution nodenext --target es2024 --allowImportingTsExtensions --skipLibCheck --types node router.ts demo.ts"
+  },
+  "dependencies": {
+    "@vercel/sandbox": "^3.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "typescript": "5.9"
+  }
+}
